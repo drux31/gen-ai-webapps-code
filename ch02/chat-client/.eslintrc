@@ -37,5 +37,9 @@
         }
       ],
       "react/react-in-jsx-scope": "off"
+    },
+    "env": {
+        "node": true,
+        "commonjs": true
     }
   }

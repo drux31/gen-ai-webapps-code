@@ -1,0 +1,39 @@
+{
+  "name": "gen-ai-webapp",
+  "build": {"dockerfile": "Dockerfile"},
+
+  "features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"username": "node",
+			"upgradePackages": "true"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "none"
+		},
+		"ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        }
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "ms-python.python",
+        "ms-azuretools.vscode-docker",
+        "swellaby.node-pack"
+			]
+		}
+	},
+
+  "forwardPorts": [5173],
+  "remoteUser": "node"
+}
+
+
